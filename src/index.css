@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#F7F3EB;
+    color:#1F1F1F;
+    overflow-x:hidden;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+img{
+    display:block;
+}
+
+.font-serif{
+    font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
+.paper-grain::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:.05;
+    pointer-events:none;
+    background-image:
+    radial-gradient(circle,#000 1px,transparent 1px);
+    background-size:18px 18px;
+}
+
+.hairline{
+    width:60px;
+    height:2px;
+    background:#C97A55;
+}
+
+.shooting-star{
+    position:absolute;
+    width:220px;
+    height:2px;
+    background:
+    linear-gradient(
+    90deg,
+    white,
+    transparent
+    );
+    opacity:0;
+    transform:rotate(-35deg);
+    animation:shoot linear infinite;
+}
+
+@keyframes shoot{
+    0%{
+        transform:
+        translateX(0)
+        translateY(0)
+        rotate(-35deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translate(-900px,450px)
+        rotate(-35deg);
+        opacity:0;
+    }
+}
+
+button{
+    cursor:pointer;
+    border:none;
+}
+
+::selection{
+    background:#C97A55;
+    color:white;
+}
