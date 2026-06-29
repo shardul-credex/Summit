@@ -31,7 +31,7 @@ export default function Hero() {
           }}
         >
           <h2 className="text-xl font-bold tracking-[8px] uppercase">
-            SUMMIT
+            FLYATLAS
           </h2>
 
           <div className="w-14 h-0.5 bg-[#C97A55] my-10" />
